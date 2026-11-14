@@ -1,0 +1,4 @@
+Warning: Kiro CLI is running as root. Tools and commands can create root-owned files or change permissions. Restart without sudo unless elevated access is intentional.
+Hide this warning: kiro-cli settings app.warnOnElevatedPrivileges false
+[tool] Reading image /home/hatch/workspace/makefun/creative/food_picture/candidates/media-generation-candidate-ramen-0-9ec9691f-0459-4be8-9c91-d213c0e35941.webp, image /home/hatch/workspace/makefun/creati...
+[tool] status: Completed
