@@ -8,8 +8,12 @@ import shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 def main() -> None:
-    os.makedirs("/output", exist_ok=True)
-    shutil.copyfile(os.path.join(HERE, "entry.png"), "/output/entry.png")
+    src = os.path.join(HERE, "entry.png")
+    dst = "/output/entry.png"
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    shutil.copyfile(src, dst)
+    if os.path.getsize(src) != os.path.getsize(dst):
+        raise SystemExit(f"copy verification failed: {src} -> {dst}")
 
 if __name__ == "__main__":
     main()
